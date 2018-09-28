@@ -12,16 +12,6 @@ with open('songs.csv') as csvfile:
         Songs.append(songs)
         Artist.append(artist)
 
-'''
-print("These are songs:\n")
-for song in Songs:
-    print(song)
-
-print("These are artists:\n")
-for artist in Artist:
-    print(artist)
-
-'''
 
 print(len(Songs))
 print(len(Artist))
@@ -50,18 +40,4 @@ while True:
         else:
             print("Your username or password is incorrect, please try again")
 
-guess = 0
-while guess < 3:
-    x = random.randint(0,108)
-    print(Artist[x])
-    title = Songs[x]
-
-    test = title[0] + title[1:].replace(title[0], "_")
-    guess += 1
-
-
-input = Songs[x]
-    words = input.split()
-    letters = [word[0] for word in words]
-    print("".join(letters))
 '''
