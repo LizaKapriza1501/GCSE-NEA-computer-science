@@ -44,6 +44,25 @@ def findUser(user_id_param):
 
     return found_user_index
 
+def passExists(pass_id_param):
+
+    pass_found = False
+    for Pass in Password:
+        if Pass == pass_id_param:
+            pass_found = True
+
+    return pass_found
+
+def findPass(pass_id_param):
+
+    found_pass_index = -1
+    for idx, Pass in enumerate(Password):
+        if Pass == pass_id_param:
+            found_pass_index = idx
+
+    return found_pass_index
+
 '''
 Liza - add function that is comparing given user/password to user/password that is stored in your Arrays.
 '''
+
