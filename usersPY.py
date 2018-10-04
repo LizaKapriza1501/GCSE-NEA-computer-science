@@ -46,7 +46,6 @@ def findUser(user_id_param):
 
     return found_user_index
 
-
     '''
     Liza - add function that is comparing given user/password to user/password that is stored in your Arrays.
     '''
@@ -78,4 +77,8 @@ def user_authorised(userGiven):
 
 
 
+
+'''
+Liza - add function that is comparing given user/password to user/password that is stored in your Arrays.
+'''
 
