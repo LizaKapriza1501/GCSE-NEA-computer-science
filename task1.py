@@ -1,6 +1,7 @@
 import csv
 import time
 import random
+import usersPY
 
 with open('songs.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter = ',')
@@ -13,6 +14,33 @@ with open('songs.csv') as csvfile:
         Songs.append(songs)
         Artist.append(artist)
 
+
+
+usersPY.init_users()
+
+tries = 0
+
+while (tries < 3):
+    userGiven = input("Please input your Username")
+    passwordGiven = input("Please input your Password")
+    userAuthenticated = usersPY.user_authentication(userGiven, passwordGiven)
+    print(userAuthenticated)
+    if (userAuthenticated):
+        break
+    tries += 1
+
+
+if (tries >= 3):
+    print ('we could not authenticate you!')
+    print('program will be terminated.')
+    exit(1)
+
+
+
+
+
+
+
 '''
 print("These are songs:\n")
 for song in Songs:
@@ -23,7 +51,7 @@ for artist in Artist:
     print(artist)
 
 '''
-
+'''
 print(len(Songs))
 print(len(Artist))
 
@@ -35,6 +63,8 @@ print('this is the random index between %(start)d and %(finish)d = %(random_song
 
 print('This is a song = %(song_name)s and this is the artist = %(artist)s' %
     { 'song_name': Songs[random_song_index], 'artist': Artist[random_song_index]})
+
+'''
 '''
 count = 0
 while True:
