@@ -1,5 +1,5 @@
-user1,pass1,active
-user2,pass2,active
-user3,pass3,active
-user4,pass4,active
-user5,pass5,active
+user1,pass1,Authorised
+user2,pass2,Authorised
+user3,pass3,Authorised
+user4,pass4,Not Authorised
+user5,pass5,Authorised

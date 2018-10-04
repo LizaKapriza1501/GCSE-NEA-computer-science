@@ -32,7 +32,6 @@ def userExists(user_id_param):
     for user in UserID:
         if user == user_id_param:
             user_found = True
-
     return user_found
 
 def findUser(user_id_param):
@@ -42,8 +41,41 @@ def findUser(user_id_param):
         if user == user_id_param:
             found_user_index = idx
 
+    if (found_user_index == -1):
+        print ('User Not Found!')
+
     return found_user_index
 
-'''
-Liza - add function that is comparing given user/password to user/password that is stored in your Arrays.
-'''
+
+    '''
+    Liza - add function that is comparing given user/password to user/password that is stored in your Arrays.
+    '''
+def user_authentication(userGiven, passwordGiven):
+    index = findUser(userGiven)
+    ret_value = False
+
+    if (index != -1 and passwordGiven == Password[index] ):
+        ret_value = True
+        print('Password Valid!')
+    else:
+        print('Invalid Password!')
+
+    return ret_value
+
+def user_authorised(userGiven):
+    index = findUser(userGiven)
+
+    ret_value = False
+
+    if (index != -1):
+        if('Authorised' == Status[index] ):
+            ret_value = True
+            print('User Authorised!')
+        else:
+            print('User NOT Authorised!')
+
+    return ret_value
+
+
+
+
