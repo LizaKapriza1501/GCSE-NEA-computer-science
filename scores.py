@@ -56,7 +56,7 @@ def add_score(user_id_param, score_param):
 def print_file_sorted():
     with open('scores.csv', 'r') as data:
         reader = csv.reader(data)
-        newList = sorted(reader, key=lambda row : int(row[1]), reverse=True)
+        newList = sorted(reader, key=lambda row : int(row[1]), reverse=True)[0:5]
         print ('  | Usernames | Scores')
         for i, r in enumerate(newList):
             print('{} | {} | {}'.format(str(i), r[0], r[1]))
