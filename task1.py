@@ -5,21 +5,23 @@ import usersPY
 import re
 import scores
 
+def obfuscate(name):
+    name=name.split(" ")
+    name=list(map(lambda x:x[0]+re.sub(r"[a-z]","_",x[1:],flags=re.IGNORECASE),name))
+    return " ".join(name)
+
 with open('songs.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter = ',')
     Songs = []
     Artist = []
 
     for row in readCSV:
-        songs = row[0]
-        artist = row[1]
-        Songs.append(songs)
+        song = row[0].strip()
+        artist = row[1].strip()
+        Songs.append(song)
         Artist.append(artist)
 
-def obfuscate(name):
-    name=name.split(" ")
-    name=list(map(lambda x:x[0]+re.sub(r"[a-z]","_",x[1:],flags=re.IGNORECASE),name))
-    return " ".join(name)
+
 
 usersPY.init_users()
 scores.init_scores()
@@ -52,8 +54,8 @@ while (stillPlaying):
     guess = 1
     random_song_index = random.randint(0, len(Songs)-1)
 
-    #print('this is the random index between %(start)d and %(finish)d = %(random_song)d' %
-    #    { 'start': 0, 'finish': len(Songs), 'random_song': random_song_index})
+    print('this is the random index between %(start)d and %(finish)d = %(random_song)d' %
+        { 'start': 0, 'finish': len(Songs), 'random_song': random_song_index})
 
 
     print('This is a song = %(song_name)s and this is the artist = %(artist)s' %
