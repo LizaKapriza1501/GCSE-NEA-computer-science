@@ -1,3 +1,12 @@
 https://codereview.stackexchange.com/questions/164359/python-username-and-password-program
 https://stackoverflow.com/questions/43476754/using-python-how-do-you-select-a-random-row-of-a-csv-file
 https://realpython.com/python-csv/
+https://codereview.stackexchange.com/questions/95499/register-login-and-authentication-through-terminal
+https://docs.python.org/3/library/stdtypes.html#old-string-formatting
+https://www.digitalocean.com/community/tutorials/how-to-write-modules-in-python-3
+https://www.programiz.com/python-programming/working-csv-files
+https://stackoverflow.com/questions/40950046/print-rows-in-csv-file
+https://stackoverflow.com/questions/3348460/csv-file-written-with-python-has-blank-lines-between-each-row
+https://realpython.com/python-csv/
+https://stackoverflow.com/questions/52371378/top-5-scores-using-csv
+https://www.jquery-az.com/how-to-remove-whitespaces-in-strings-of-python/
