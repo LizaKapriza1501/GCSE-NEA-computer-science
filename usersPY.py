@@ -18,16 +18,7 @@ def init_users():
             Password.append(password)
             Status.append(status)
 
-
-
-'''
-find user with the name that is send in user_id_param in the UserID array
-'''
 def userExists(user_id_param):
-    '''
-    liza - change this function, so it is using the findUser function and does NOT do it's own traversing of array
-    '''
-
     user_found = False
     for user in UserID:
         if user == user_id_param:
@@ -46,9 +37,6 @@ def findUser(user_id_param):
 
     return found_user_index
 
-    '''
-    Liza - add function that is comparing given user/password to user/password that is stored in your Arrays.
-    '''
 def user_authentication(userGiven, passwordGiven):
     index = findUser(userGiven)
     ret_value = False
@@ -75,10 +63,4 @@ def user_authorised(userGiven):
 
     return ret_value
 
-
-
-
-'''
-Liza - add function that is comparing given user/password to user/password that is stored in your Arrays.
-'''
 
