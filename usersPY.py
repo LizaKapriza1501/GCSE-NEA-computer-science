@@ -10,7 +10,7 @@ Status = []
 def init_users():
     with open('users.csv') as csvfile:
         readCSV = csv.reader(csvfile, delimiter = ',')
-        for row in readCSV: #will assign variables to specific column/row in external file
+        for row in readCSV: #will assign variables to specific column/row in external csv file
             userID = row[0]
             password = row[1]
             status = row[2]

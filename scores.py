@@ -1,10 +1,11 @@
-
+#importing of modules
 import csv
 import time
 
 UserID = []
 Scores = []
 
+#defines variable using open parameter
 def init_scores():
     UserID.clear()
     Scores.clear()
@@ -12,7 +13,7 @@ def init_scores():
     with open('scores.csv', 'r') as csvfile:
         readCSV = csv.reader(csvfile, delimiter = ',')
         for row in readCSV:
-            #you should check that the row (e.g.: line in the file) is NOT empty
+
             currentUserID = row[0]
             currentScore = row[1]
             UserID.append(currentUserID)
